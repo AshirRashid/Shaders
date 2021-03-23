@@ -17,8 +17,8 @@ float moving_line(vec2 pos, float t, float m, float c_offset, float width, float
 }
 
 void fragment() {
-    vec2 pos = UV;
+	vec2 pos = UV;
 	vec4 texture_color = texture(TEXTURE, UV);
 	vec3 shine_color = vec3(1) * moving_line(pos, TIME, 1, 2, 0.3, 3);
-    COLOR = vec4(shine_color+texture_color.xyz,texture_color.a);
+    	COLOR = vec4(shine_color+texture_color.xyz,texture_color.a);
 }
